@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:vibration/vibration.dart';
+
+class RsisAlerts {
+  final FlutterLocalNotificationsPlugin _notificationsPlugin =
+      FlutterLocalNotificationsPlugin();
+
+  RsisAlerts() {
+    _initNotifications();
+  }
+
+  void _initNotifications() async {
+    const AndroidInitializationSettings androidSettings =
+        AndroidInitializationSettings('@mipmap/ic_launcher');
+    const IOSInitializationSettings iosSettings = IOSInitializationSettings();
+    const InitializationSettings initSettings =
+        InitializationSettings(android: androidSettings, iOS: iosSettings);
+
+    await _notificationsPlugin.initialize(initSettings,
+        onSelectNotification: (String? payload) async {
+      // Optional: handle user tapping on notification
+      print('Notification clicked: $payload');
+    });
+  }
+
+  // Trigger local push notification
+  Future<void> showHazardNotification(String title, String body) async {
+    const AndroidNotificationDetails androidDetails =
+        AndroidNotificationDetails('rsis_channel', 'RSIS Alerts',
+            channelDescription: 'Safety hazard notifications',
+            importance: Importance.max,
+            priority: Priority.high,
+            ticker: 'ticker');
+    const IOSNotificationDetails iosDetails = IOSNotificationDetails();
+    const NotificationDetails details =
+        NotificationDetails(android: androidDetails, iOS: iosDetails);
+
+    await _notificationsPlugin.show(0, title, body, details);
+  }
+
+  // Trigger haptic feedback for critical hazard
+  Future<void> triggerHaptic() async {
+    if (await Vibration.hasVibrator() ?? false) {
+      Vibration.vibrate(duration: 500, amplitude: 128);
+    }
+  }
+
+  // Combine notification + haptic alert
+  Future<void> alertCriticalHazard(String tileId, String riskLevel) async {
+    if (riskLevel == 'CRITICAL') {
+      await triggerHaptic();
+      await showHazardNotification(
+          '⚠️ Critical Hazard Nearby', 'Tile: $tileId | Risk: $riskLevel');
+    }
+  }
+}
