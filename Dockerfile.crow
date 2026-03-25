@@ -1,0 +1,5 @@
+FROM gcc:12
+WORKDIR /crow
+COPY ../backend/crow_connector.cpp .
+RUN g++ crow_connector.cpp -o crow_connector
+CMD ["./crow_connector"]
