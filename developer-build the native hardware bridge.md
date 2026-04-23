@@ -86,6 +86,4 @@ If this opportunity is of interest, a live walkthrough of the system can be arra
 works and where the Bluetooth integration fits into the architecture. This is an opportunity to contribute to a working
 safety infrastructure system with measurable real-world impact.
 
-Eric Lindau
-Founder — RSIS Road Safety Intelligence System
-RSIS 6.2 — Protecting Cyclists, Pedestrians, and Drivers
+Invented and conceptually developed by Eric C. Lindau. Assisted through AI-aided co-engineering environments (ChatGPT 5), Grok and Github co=pilot collberation as well as bring special thanks and Grok chat for bring us the images. All combinatorial elements, structural mappings, material configurations, and thermoelectric AI feedback systems are attributed to the inventor and may be subject to protection under applicable copyright, intellectual property, and patent frameworks.
