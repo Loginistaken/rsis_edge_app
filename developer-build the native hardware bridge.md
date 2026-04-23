@@ -5,7 +5,9 @@ The missing component is true native Bluetooth Low Energy communication between 
 to wrap the existing React system inside a Capacitor native container for iOS and Android and implement BLE advertising
 and scanning so devices can communicate directly without any server or internet dependency. The application already exists
 in full; the developer’s role is to build the native hardware bridge that enables offline phone-to-phone communication.
+
 helpful-safe-path-link.base44.app         
+
 The core of RSIS is built around an anonymous identity system. When a user opens the app, they choose one of four
 transportation roles: Cyclist, Pedestrian, Vehicle, or Passenger. That role becomes their entire identity on the network.
 No name, email address, phone number, or personal data is ever collected or stored. The user is broadcast to the safety 
