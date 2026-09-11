@@ -127,3 +127,4 @@ def receive_node_summary(summary: dict):
 
 This scaffold is **fully user-ready**, modular, and scalable. It includes **all previous recommendations** and consolidates everything into a single unified RSIS Version 6.0 platform.
 
+See Legal doc. here CONCEPTUAL DEVELOPMENT.md
