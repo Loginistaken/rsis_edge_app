@@ -40,5 +40,4 @@ npm start
 - Push to the branch (`git push origin feature/YourFeature`).
 - Create a new Pull Request.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+See Legal doc. here CONCEPTUAL DEVELOPMENT.md
