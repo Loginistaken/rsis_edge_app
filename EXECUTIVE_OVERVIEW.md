@@ -86,6 +86,4 @@ Advanced layer: predictive analytics, fleet intelligence, and extended historica
 
 Full system capabilities are dependent on active Blue-Web connectivity and the native RSIS application environment.
 
-Inventorship Notice
-
-Invented and conceptually developed by Eric C. Lindau. Assisted through AI-aided co-engineering environments (ChatGPT 5), Grok, and GitHub Copilot collaboration. Structural modeling, system architecture, and combinatorial safety logic are attributed to the inventor and may be subject to intellectual property protection.
+See Legal doc. here CONCEPTUAL DEVELOPMENT.md
